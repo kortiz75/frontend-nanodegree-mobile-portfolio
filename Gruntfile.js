@@ -20,13 +20,14 @@ module.exports = function(grunt) {
 		        }
 		},
 		imagemin: { 
-			options: {                        
-        		optimizationLevel: 3  
-        	},                        
-		    files: {                          
-		      'img/profilepic-min.jpg': 'img/profilepic.jpg', // 'destination': 'source' 
-		      'views/images/pizzeria-min.jpg': 'views/images/pizzeria.jpg'
-		    }
+			static: {
+				options: {                        
+	        		optimizationLevel: 3  
+	        	},                        
+			    files: {                          
+			      'img/profilepic-min.jpg':'img/profilepic.jpg'
+			    }
+			}
 		}
 	});
 	
