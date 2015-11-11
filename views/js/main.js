@@ -504,9 +504,18 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.getElementsByClassName('mover');
+  //sets an array for the repeating values to be stored 
+  var phaseArray = [];
+  //pushes the repeating values to the array
+  for (i = 0; i < 5; i++) {
+    phaseArray.push(Math.sin((document.body.scrollTop / 1250) + i));
+  }
+  //interates through array and updates the pizza positions
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    var phase = phaseArray[i % 5];
+    var pizzaStyle = (items[i].basicLeft + 100 * phase) - 1024 + 'px';
+    //uses transform instead of style.left to lessen paint
+   items[i].style.transform = 'translateX(' + pizzaStyle + ')';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
