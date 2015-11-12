@@ -1,3 +1,4 @@
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
@@ -71,3 +72,11 @@ Feeling uninspired by the portfolio? Here's a list of cool portfolios I found af
 * <a href="http://nicoledominguez.com/portfolio/">http://nicoledominguez.com/portfolio/</a>
 * <a href="http://www.roxannecook.com/">http://www.roxannecook.com/</a>
 * <a href="http://www.84colors.com/portfolio.html">http://www.84colors.com/portfolio.html</a>
+
+### Optimizations to views/js/main.js
+
+* Removed determinDx() function from changePizzaSizes()
+* Moved repeating numbers from updatePositions() into an array, then iterated through the array
+* Changed style.left to style.transform
+* Lessened amount of pizzas from 200 to 24
+* Moved pizzas into their own layer in views/css/style.css using will-change: transform
