@@ -1,5 +1,9 @@
 # Website Optimization Instructions
 
+## Purpose of Project
+
+To optimize a provided website with a number of optimization- and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second.
+
 ### To open on GitHub
 
 1. Navigate to http://kortiz75.github.io/mobile-portfolio to open up the portfolio site
